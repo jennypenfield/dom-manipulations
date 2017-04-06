@@ -64,15 +64,13 @@ document.querySelector('#pig-latin button').addEventListener('click', function r
 
 document.querySelector('#cycle-image button').addEventListener('click', function cycleThruPhotos () {
   console.log(document.getElementById('city-img').src)
-  setInterval(function () {
-    var source = document.getElementById('city-img').src
-    var srcNum = source.charAt(source.length - 1)
-    source.substring(0, source.length - 1) + srcNum
-    srcNum++
-    if (srcNum > 7) {
-      srcNum = 1
-    }
-    document.getElementById('city-img').src = source.substring(0, source.length - 1) + srcNum
-    console.log(document.getElementById('city-img').src)
-  }, 2000)
+  var source = document.getElementById('city-img').src
+  var srcNum = source.charAt(source.length - 1)
+  source.substring(0, source.length - 1) + srcNum
+  srcNum++
+  if (srcNum > 7) {
+    srcNum = 1
+  }
+  document.getElementById('city-img').src = source.substring(0, source.length - 1) + srcNum
+  console.log(document.getElementById('city-img').src)
 })
